@@ -68,6 +68,7 @@ def pick_averaging_method():
         print("picked: Mode")
         avg = statistics.mode(grades)
         return avg
+    # they didn't enter the right thing, so error
     else:
         print("Error in pick_averaging_method: incorrect option picked")
         exit()
@@ -83,7 +84,14 @@ def pick_visualization(average):
     Any other input prints
     'Error in pick_visualization: incorrect option picked'.
     """
-    pass
+    vis = input("Pick '1' for print average, or '2' for plot average: ")
+    if vis == '1':
+        print_list_and_average(average)
+    elif vis == '2':
+        plot_grades(average)
+    else:
+        print("Error in pick_visualization: incorrect option picked")
+        exit()
 
 
 # ---------------------------------------
