@@ -1,7 +1,7 @@
 """
-Name: (put your name here)
-Peers: (add any collaborators)
-References: (anything you checked to solve this)
+Name: Ash Rulifson
+Peers: none
+References: my class notes
 """
 
 # imported modules
@@ -85,10 +85,15 @@ def pick_visualization(average):
     'Error in pick_visualization: incorrect option picked'.
     """
     vis = input("Pick '1' for print average, or '2' for plot average: ")
+    
+    # print the simple average result after the list
     if vis == '1':
         print_list_and_average(average)
+        
+    #  print a "fancy" version of the list items, with annotations to indicate where the average is located.
     elif vis == '2':
         plot_grades(average)
+        
     else:
         print("Error in pick_visualization: incorrect option picked")
         exit()
