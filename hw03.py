@@ -5,7 +5,7 @@ References: (anything you checked to solve this)
 """
 
 # imported modules
-import statistics # let's us use mean, median, mode
+import statistics # lets us use mean, median, mode
 
 # This is a global variable (seen by all local scopes)
 grades = [0,0,0,0,0] # initialized with five zeros
@@ -24,12 +24,18 @@ def read_five_ints():
     """
     for idx in range ( len(grades) ):
         # for each idx in 0, 1,... 4 do:
+        next = input("Give me the next grade in [0 to 10]: ")
         # check if the input is not a digit print error
+        if next.isdigit() != True:
+            print("Error in read_five_ints: input string is not for an integer")
+            exit()
         # convert to int
+        else:
+            next = int(next)
         # check if the int is not in the interval [0 to 10] print error
         # add the int to grades at index idx
 
-        pass
+        print("Done")
 
     #Anything with this indentation is NO LONGER inside the loop
 
