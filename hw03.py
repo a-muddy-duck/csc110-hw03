@@ -40,9 +40,7 @@ def read_five_ints():
             # add the int to grades at index idx
             else:
                 grades[idx] = next
-            #    print(grades)
-
-
+            #    print(grades) # allows me to check what's up
     #Anything with this indentation is NO LONGER inside the loop
 
 
@@ -57,7 +55,22 @@ def pick_averaging_method():
     Any other input prints
     'Error in pick_averaging_method: incorrect option picked'.
     """
-    pass
+    method = input("Pick 'a' for mean, 'b' for median, 'c' for mode: ")
+    if method == 'a':
+        print("picked: Mean")
+        avg = statistics.mean(grades)
+        return avg
+    elif method == 'b':
+        print("picked: Median")
+        avg = statistics.median(grades)
+        return avg
+    elif method == 'c':
+        print("picked: Mode")
+        avg = statistics.mode(grades)
+        return avg
+    else:
+        print("Error in pick_averaging_method: incorrect option picked")
+        exit()
 
 # Task 3:
 #  Complete the function "pick_visualization" below:
